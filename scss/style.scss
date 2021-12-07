@@ -1,0 +1,264 @@
+@import 'variables.scss';
+
+
+
+
+*{
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+header nav ul{
+    display: grid;
+    grid-template-columns: 8% 23% 23% 23% 23%;
+    grid-row-gap: 8px;
+    grid-column-gap: 2px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+main{
+    display: grid;
+    grid-template-areas: 
+    'section1 section1 aside1'
+    'section2 section2 section3'
+    'section2 section2 section3';
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-template-rows: 500px 250px 250px;
+    justify-items: stretch;
+    
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    justify-items: center;
+}
+
+
+.body__sectionHeader{
+    color:white;
+    background-image: linear-gradient(to bottom, #AC0700, #AC0700, #AC0700, white);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.body__section1{
+    grid-area: section1;
+    justify-items: center;
+    align-items: center;
+}
+
+.body__section2{
+    grid-area: section2;
+    
+}
+
+.body__section3{
+    grid-area: section3;
+    
+}
+
+.body__aside1{
+    grid-area: aside1;
+    justify-self: center;
+    align-self: center;
+    animation-name: animacionLogo;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+}
+
+
+.body__sectionFooter{
+    color: $colorterciario;
+    background-image: linear-gradient(to top, #545454, #545454, #545454, #585858, #6b6b6b, #747474);
+}
+
+.body__tituloPrincipal{
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.body__tituloSecundario{
+    font-size: 18px;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: bold;
+}
+
+
+h2:hover{
+    transform: scaleY(2) scaleX(1);
+}
+
+
+.logoMaximizado:hover{
+    transform: scaleY(2) scaleX(2);
+}
+
+@keyframes animacionLogo{
+    0% { width: 0px;}
+    5% { width: 200px;}
+    10% { width: 300px;}
+    15% { width: 200px;}
+    25% { width: 50px;}
+    35% { width: 150px;}
+    45% { width: 200px;}
+    50% { width: 250px;}
+    60% { width: 300px;}
+    65% { width: 50px;}
+    75% { width: 100px;}
+    80% { width: 150px;}
+    90% { width: 200px;}
+    100% { width: 240px;}
+}
+
+
+
+
+
+
+ul {
+    list-style-type: none;
+    li{display: inline-block;
+        width: 10%;
+        position:relative;
+        font-size: 18px;
+        a {
+            font-size: 18px;
+            color:$colorterciario;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 4px;
+            ul {
+                position: absolute;
+                display: none;
+                li {
+                    display: block;
+                }
+            }   
+        }
+    }
+}
+
+a:hover{
+    background-color:$colorterciario;
+    color: $colorprincipal;
+}
+
+li:hover ul {
+    display: block;
+    background-color: $colorprincipal;
+    
+}
+       
+
+table th{
+    color: $colorterciario;
+    background-color: $colorprincipal;
+}
+
+
+table th{
+    color: $colorterciario;
+    background-color: $colorprincipal;
+}
+
+
+h1{
+    color: $colorprincipal;
+}
+
+h2{
+    color: $colorprincipal;
+}
+
+h3{
+    color:#37848C;
+}
+
+div{
+    color: $colorsecundario;
+}
+
+
+
+
+
+.styleNormal{font-style: normal;}
+
+.styleItalic{font-style: italic;}
+
+.fondoColorClaro{background-color: #FCFEF4;}
+
+.sizeGrande{font-size: 35px;}
+
+.sizeNormal{font-size: 18px;}
+
+.sizeChica{font-size: 13px;}
+
+.impact{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+
+.didactGothic{font-family: 'Didact Gothic', sans-serif;}
+
+.arial{font-family: Arial, Helvetica, sans-serif; text-align: justify;}
+
+.weightNegrita{font-weight: bold;}
+
+.textoCentrado{ text-align: center;}
+
+.interlineado{line-height: 2;}
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+    body{
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px){
+    body{
+        background-color: red;
+    }
+    main{
+        display: grid;
+        grid-template-areas: 
+        'section1 section1'
+        'section1 section1'
+        'section2 aside1'
+        'section3 section3';
+        grid-template-columns: 11fr 1fr;
+        grid-template-rows: 250px 250px 800px 400px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;   
+    }
+}
+
+@media only screen and (max-width: 320px){
+    body{
+        background-color: green;
+    }
+    main{
+        display: grid;
+        grid-template-areas: 
+        'section1'
+        'section1'
+        'section2'
+        'aside1'
+        'section3';
+        grid-template-columns: 12fr;
+        grid-template-rows: 250px 250px 350px 300px 300px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;    
+    }   
+    
+}

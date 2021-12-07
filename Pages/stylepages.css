@@ -1,0 +1,166 @@
+*{
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+header nav ul{
+    display: grid;
+    grid-template-columns: 8% 23% 23% 23% 23%;
+    grid-row-gap: 8px;
+    grid-column-gap: 2px;
+    justify-items: center;
+    align-items: center;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+    'section1 section2'
+    'section1 section2';
+    grid-template-columns: 4fr 8fr;
+    grid-template-rows: 550px 100px;
+    justify-items: stretch;
+    
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    justify-items: center;
+}
+
+.sectionHeader{
+    color:white;
+    background-image: linear-gradient(to bottom, #AC0700, #AC0700, #AC0700, white);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.section1{
+    grid-area: section1;
+    justify-content: center
+
+}
+
+.section2{
+    grid-area: section2;
+    
+    justify-content: center
+}
+
+
+.sectionFooter{
+    color: white;
+    background-image: linear-gradient(to top, #545454, #545454, #545454, #585858, #6b6b6b, #747474);
+}
+
+
+h2:hover{
+    transform: scaleY(2) scaleX(1);
+}
+
+.logoMaximizado:hover{
+    transform: scaleY(2) scaleX(2);
+}
+
+
+
+
+
+ul {
+ list-style-type: none;
+}
+    
+li {
+    display: inline-block;
+    width: 10%;
+    position:relative;
+    font-size: 18px;
+}
+    
+    
+ul li ul {
+    position: absolute;
+    display: none;
+}
+    
+ul li ul li {
+    display: block;
+}
+    
+li a:hover{
+    background-color: white;
+    color: #AC0700;
+}
+    
+ul li:hover ul {
+    display: block;
+    background-color: #AC0700;
+}
+    
+a {
+    font-size: 18px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 4px;
+}
+
+
+
+.styleNormal{font-style: normal;}
+
+.styleItalic{font-style: italic;}
+
+.fondoColorClaro{background-color: #FCFEF4;}
+
+.sizeGrande{font-size: 35px;}
+
+.sizeNormal{font-size: 18px;}
+
+.sizeChica{font-size: 13px;}
+
+.impact{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+
+.didactGothic{font-family: 'Didact Gothic', sans-serif;}
+
+.arial{font-family: Arial, Helvetica, sans-serif; text-align: justify;}
+
+.weightNegrita{font-weight: bold;}
+
+.textoCentrado{ text-align: center;}
+
+.interlineado{line-height: 2;}
+
+.listaAbreviada li a{font-size: 18px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #AC0700; text-decoration: none;}
+
+
+
+h1{
+    color:#AC0700;
+}
+
+h2{
+    color:#AC0700;
+}
+
+h3{
+    color:#37848C;
+}
+
+div{
+    color:#545454;
+}
+
+
+table th{
+    color: white;
+    background-color: #AC0700;
+}
+
+ui li{
+    color: #F2AE30;
+}
